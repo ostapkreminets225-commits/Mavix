@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Mavix",
+  "version": "0.1.0",
+  "identifier": "dev.mavix.ide",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1430",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Mavix",
+        "width": 1480,
+        "height": 920,
+        "minWidth": 960,
+        "minHeight": 600,
+        "center": true,
+        "decorations": false,
+        "backgroundColor": "#121212",
+        "dragDropEnabled": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"]
+  }
+}

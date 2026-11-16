@@ -1,0 +1,338 @@
+.cc.slack {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cc.slack .cc-section.grow:not(.closed) {
+  flex: none;
+}
+
+.cc.slack .cc-list {
+  flex: none;
+  overflow: visible;
+}
+
+.slack-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.activity-item .activity-slack {
+  opacity: 0.82;
+  transition: opacity 0.12s;
+}
+
+.activity-item:hover .activity-slack,
+.activity-item.active .activity-slack {
+  opacity: 1;
+}
+
+.slack-loading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.slack-note {
+  display: flex;
+  gap: 9px;
+  margin: 10px 0 4px;
+  padding: 9px 11px;
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--ok) 35%, var(--line-strong));
+  background: color-mix(in srgb, var(--ok) 7%, var(--bg-side));
+  color: var(--fg-3);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.slack-note svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--ok);
+}
+
+.slack-note b {
+  color: var(--fg);
+}
+
+.slack-connect .slack-note {
+  margin-top: 4px;
+}
+
+.slack-steps {
+  margin: 12px 0 10px;
+  padding: 0 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--fg-2);
+}
+
+.slack-steps li {
+  padding-left: 2px;
+}
+
+.slack-steps li::marker {
+  color: var(--fg-4);
+  font-weight: 600;
+}
+
+.slack-steps b {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.slack-step-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.slack-token {
+  display: flex;
+  gap: 6px;
+}
+
+.slack-token .input {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.slack-fine {
+  margin-top: 8px;
+  font-size: 11.5px;
+}
+
+.slack-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--fg-3);
+}
+
+.slack-status svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.slack-status.ok svg {
+  color: var(--ok);
+}
+
+.slack-status.bad {
+  color: var(--danger);
+}
+
+.slack-days {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 6px;
+  background: var(--bg-raised);
+}
+
+.slack-days button {
+  height: 20px;
+  min-width: 26px;
+  padding: 0 5px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: var(--fg-3);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.slack-days button:hover {
+  color: var(--fg);
+}
+
+.slack-days button.on {
+  background: var(--bg-side);
+  border-color: var(--line-strong);
+  color: var(--fg);
+}
+
+.slack-build {
+  margin-top: 4px;
+  justify-content: center;
+  gap: 6px;
+}
+
+.slack-digest {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.slack-summary {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--fg);
+  user-select: text;
+}
+
+.slack-group {
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-editor);
+  overflow: hidden;
+}
+
+.slack-group-head {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 0 6px;
+  color: var(--fg-2);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.slack-group-head:hover {
+  background: color-mix(in srgb, var(--bg-hover) 60%, var(--bg-editor));
+}
+
+.slack-group-chevron {
+  flex: none;
+  color: var(--fg-4);
+  transition: transform 0.12s;
+}
+
+.slack-group-head.closed .slack-group-chevron {
+  transform: rotate(-90deg);
+}
+
+.slack-group-title {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slack-group.kind-edits .slack-group-head > svg:nth-child(2) {
+  color: var(--accent);
+}
+
+.slack-group.kind-questions .slack-group-head > svg:nth-child(2) {
+  color: #d97757;
+}
+
+.slack-group.kind-bugs .slack-group-head > svg:nth-child(2) {
+  color: var(--danger);
+}
+
+.slack-group.kind-deadlines .slack-group-head > svg:nth-child(2) {
+  color: var(--warn);
+}
+
+.slack-group.kind-mentions .slack-group-head > svg:nth-child(2) {
+  color: var(--ok);
+}
+
+.slack-group.kind-info .slack-group-head > svg:nth-child(2) {
+  color: var(--fg-3);
+}
+
+.slack-item {
+  padding: 7px 10px 8px 27px;
+  border-top: 1px solid var(--line);
+}
+
+.slack-item-text {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--fg);
+  user-select: text;
+}
+
+.slack-ref {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--fg-4);
+  text-align: left;
+}
+
+.slack-ref:hover {
+  color: var(--fg-2);
+}
+
+.slack-ref-chat {
+  flex: none;
+  max-width: 48%;
+  color: var(--fg-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slack-ref-meta {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slack-ref-go {
+  flex: none;
+  opacity: 0;
+}
+
+.slack-ref:hover .slack-ref-go {
+  opacity: 1;
+}
+
+.slack-warn {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--danger);
+}
+
+.slack-warn svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.slack-kind {
+  padding: 8px 14px 3px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--fg-4);
+}
+
+.slack .cc-row.slack-chat {
+  padding: 0 12px 0 16px;
+  color: var(--fg-4);
+}
+
+.slack .cc-row.slack-chat.on {
+  color: var(--fg-2);
+}
+
+.slack .cc-row.slack-chat.on .cc-row-title {
+  color: var(--fg);
+}
